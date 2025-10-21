@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <link rel="icon" type="image/png" href="{{ url_for('static', filename='favicon.png') }}">
+
+
+  <title>Redoku</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1><a href="{{ url_for('index') }}">Redoku</a></h1>
+      <p class="tag">Turn text into dyslexia-friendly PDFs</p>
+    </header>
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        <ul class="flashes">
+          {% for cat, msg in messages %}
+            <li class="flash {{ cat }}">{{ msg }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+
+    <main>
+      {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+      <p>&copy; Redoku - By Edgar Doumen</p>
+      <p>Redoku follows the British Dyslexia Association guidelines for accessibility.</p>
+      <a href="https://www.thedyslexia-spldtrust.org.uk/media/downloads/69-bda-style-guide-april14.pdf">Learn more</a>
+    </footer>
+  </div>
+</body>
+</html>

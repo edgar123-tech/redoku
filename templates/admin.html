@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="admin">
+  <h2>Subscribers</h2>
+  <p><strong>Warning: Sensible data</strong></section></p>
+  <table>
+    <thead>
+      <tr><th>Email</th><th>Saved</th></tr>
+    </thead>
+    <tbody>
+      {% for s in subs %}
+        <tr>
+          <td>{{ s.email }}</td>
+          <td>{{ s.created_at }}</td>
+        </tr>
+      {% else %}
+        <tr><td colspan="2">No subscribers yet.</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</section>
+{% endblock %}

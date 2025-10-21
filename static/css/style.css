@@ -1,0 +1,194 @@
+:root{
+  --bg: #f5f5f7;
+  --card: #ffffff;
+  --muted: #7d7d7d;
+  --accent: #2c3e50;
+  --white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background: linear-gradient(135deg, #f0e9d2 0%, #dbeaf6 100%);
+  color: var(--accent);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 880px;
+  margin: 32px;
+  padding: 24px;
+  background: var(--card);
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+header h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 0;
+    font-size: 2.4rem;
+    color: #2c3e50; /* solid dark slate */
+    font-weight: 700;
+    text-decoration: none; /* removes any underline */
+    user-select: none; /* optional, prevents weird highlighting */
+}
+header h1:active,
+header h1:focus {
+    color: #2c3e50; /* keeps color consistent when clicked or focused */
+}
+
+
+.tag {
+  color: var(--muted);
+  margin-top: 6px;
+  font-style: italic;
+}
+
+.tool {
+  background: rgba(255,255,255,0.9);
+  padding: 28px;
+  border-radius: 16px;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.08);
+  backdrop-filter: blur(6px);
+}
+
+label {
+  display: block;
+  margin-top: 14px;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+textarea {
+  width: 100%;
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(0,0,0,0.1);
+  min-height: 200px;
+  resize: vertical;
+  font-size: 16px;
+  color: var(--accent);
+  background: #fefefe;
+  transition: border 0.2s ease;
+}
+
+textarea:focus {
+  border-color: #a0c4ff;
+  outline: none;
+}
+
+input[type=email] {
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(0,0,0,0.1);
+  font-size: 16px;
+  color: var(--accent);
+  background: #fefefe;
+  transition: border 0.2s ease;
+}
+
+input[type=email]:focus {
+  border-color: #a0c4ff;
+  outline: none;
+}
+
+.buttons {
+  margin-top: 16px;
+}
+
+button {
+    padding: 12px 22px;
+    border-radius: 12px;
+    border: none;
+    background: linear-gradient(145deg, #4b6cb7, #4b6cb7);
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+button:active {
+    transform: translateY(0);
+    background: linear-gradient(145deg, #3a5595, #101f34); /* darker on click */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    color: #ffffff; /* keeps text white */
+}
+
+button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(75, 108, 183, 0.4); /* subtle focus halo */
+}
+
+
+.note {
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.flashes {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 12px 0;
+}
+
+.flash {
+  padding: 12px 16px;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.flash.success {
+  background: rgba(72, 196, 128, 0.15);
+  color: #2c3e50;
+}
+
+.flash.error {
+  background: rgba(255, 99, 71, 0.12);
+  color: #7d8d78;
+}
+
+.flash.info {
+  background: rgba(52, 152, 219, 0.12);
+  color: #2980b9;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 14px;
+  font-size: 0.95rem;
+}
+
+th, td {
+  padding: 10px 12px;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  text-align: left;
+  color: var(--accent);
+}
+
+th {
+  font-weight: 600;
+}

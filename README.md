@@ -6,7 +6,7 @@ Redoku converts input text into dyslexia-friendly PDF files and stores optional 
 - Input text -> download dyslexia-friendly PDF
 - PDF characteristics: large font, extra spacing, first letter of each word highlighted, soft background
 - Collect and store email addresses only (SQLite)
-- No ads, no newsletter sending by default
+
 
 ## Local setup
 
